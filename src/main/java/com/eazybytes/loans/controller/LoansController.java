@@ -190,6 +190,7 @@ public class LoansController {
     )
     @GetMapping("/contact-info")
     public ResponseEntity<LoansContactInfoDto> getContactInfo() {
+        log.info("Checking the retry mechanism from gateway server is working");
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(loansContactInfoDto);
